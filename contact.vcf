@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Filipe Ferreira
+N:Ferreira;Filipe;;;
+ORG:Lisabor Bordados
+TITLE:Diretor de Operações
+TEL;TYPE=WORK,VOICE:+351000000000
+EMAIL:filipe.f@lisaborbordados.com
+URL:https://lisabor-bordados.vercel.app/en
+END:VCARD

@@ -1,0 +1,143 @@
+:root {
+  --background: #0B0B0B;
+  --foreground: #FFFFFF;
+  --brand: #F9B233;
+  --brand-dark: #CC7F09;
+  --font-title: 'Space Grotesk', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.language-selector {
+    margin: 3em 0 2em 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.language-selector button {
+    background: transparent;
+    border: 1px solid var(--foreground);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+
+.language-selector button.active {
+    border-color: var(--brand);
+    color: var(--brand);
+    opacity: 1;
+}
+
+/* Tailles par défaut - pour les mobiles */
+.card-header .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--brand);
+    object-fit: cover;
+    margin: 0 auto 1.5em;
+}
+
+.card-header h1 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.card-header .job-title {
+  font-size: 1.1rem;
+  margin: 0.5em 0 1em 0;
+  letter-spacing: 0.5px;
+  color: var(--brand);
+  font-weight: 500;
+}
+
+.card-header .bio {
+    font-size: 1rem;
+    font-style: italic;
+    margin: -0.5em auto 2.5em auto;
+    opacity: 0.8;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+.card-links .button {
+  display: block;
+  background-color: transparent;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+  padding: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-links .button.primary {
+  background-color: var(--brand);
+  color: var(--background);
+}
+
+.card-links .button:hover {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: var(--background);
+}
+
+.card-footer {
+  margin-top: 1em;
+}
+
+.footer-logo {
+    max-width: 150px;
+    height: auto;
+    opacity: 0.8;
+}
+
+
+/* --- Media Query pour les écrans plus larges (Tablettes, PC) --- */
+/* Ces styles ne s'appliqueront que si la largeur de l'écran est de 768px ou plus */
+
+@media (min-width: 768px) {
+  
+  .card-header .profile-picture {
+    width: 150px;  /* On agrandit la photo */
+    height: 150px; /* On agrandit la photo */
+  }
+
+ 
+
+  .card-header .job-title {
+    font-size: 1.2rem; /* On agrandit légèrement le poste */
+  }
+  
+  .card-header .bio {
+      font-size: 1.1rem; /* On agrandit légèrement la bio */
+  }
+
+}
